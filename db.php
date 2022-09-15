@@ -1,9 +1,9 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "onlineshop";
+$servername = getenv("DB_SERVER");
+$username = getenv("DB_USERNAME");
+$password = getenv("DB_PASSWORD");
+$db = getenv("DB_DATABASE");
 
 // Create connection
 $con = mysqli_connect($servername, $username, $password,$db);
